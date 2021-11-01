@@ -1,6 +1,6 @@
 {
-  "name-web":"STACKOVERFLOW MASKODING",
-  "author":"MASKODING",
+  "name-web":"ngetribun info",
+  "author":"ngetribun",
   "remove-comment-html":true,
   "target":"https://m.tribunnews.com",
   "name-folder-sitemap":"sitemap",
@@ -20,6 +20,19 @@
   ],
   "costom-element-remove":[
     {
+      "target":"stackoverflow.com",
+      "element-remove-selector":[
+        ".js-dismissable-hero",
+        ".lazy-loading"
+      ],
+      "replace-string":[
+        {
+          "target":"https://stackoverflow.com",
+          "replace":"${nameWeb}"
+        }
+      ]
+    },
+    {
       "target":"m.tribunnews.com",
       "element-remove-selector":[
         ".baca",
@@ -34,39 +47,43 @@
         ".box__reserved.mh10"
       ],
       "replace-string":[]
+    },
+    {
+      "target":"www.itb.ac.id",
+      "element-remove-selector":[
+        ".box-header",
+        ".box-language",
+        ".section-10",
+        ".sidebar.active"
+      ],
+      "replace-string":[]
+    },
+    {
+      "target":"repositori.usu.ac.id",
+      "element-remove-selector":[
+        "header",
+        ".trail-wrapper",
+        "footer"
+      ],
+      "replace-string":[]
     }
   ],
   "inject-element-head":[
     {
-      "name-element":"meta",
-      "data-attribute":[
-        {
-          "name-attribute":"name",
-          "value-attribute":"google-site-verification"
-        },
-        {
-          "name-attribute":"content",
-          "value-attribute":"8Pgwn8p9y8NYsNJ97yagrlEDBhuErFEQ5Qwem-1Lihs"
-        }
-      ],
-      "data-innerHTML":"",
-      "position":"start"
+  "name-element":"meta",
+  "data-attribute":[
+    {
+      "name-attribute":"name",
+      "value-attribute":"google-site-verification"
     },
     {
-      "name-element":"meta",
-      "data-attribute":[
-        {
-          "name-attribute":"name",
-          "value-attribute":"viewport"
-        },
-        {
-          "name-attribute":"content",
-          "value-attribute":"width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=5.0"
-        }
-      ],
-      "data-innerHTML":"",
-      "position":"start"
-    },
+      "name-attribute":"content",
+      "value-attribute":"9PE79T3LOtcLUDiG7l2F5_LpRyl1vbJ_L59JCjnYCL8"
+    }
+  ],
+  "data-innerHTML":"",
+  "position":"start"
+},
     {
       "name-element":"meta",
       "data-attribute":[
@@ -193,25 +210,6 @@
         {
           "name-attribute":"content",
           "value-attribute":"${authorPost}"
-        }
-      ],
-      "data-innerHTML":"",
-      "position":"start"
-    },
-    {
-      "name-element":"script",
-      "data-attribute":[
-        {
-          "name-attribute":"async",
-          "value-attribute":"async"
-        },
-        {
-          "name-attribute":"src",
-          "value-attribute":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        },
-        {
-          "name-attribute":"data-ad-client",
-          "value-attribute":"ca-pub-XXXXXXXXXXX"
         }
       ],
       "data-innerHTML":"",
